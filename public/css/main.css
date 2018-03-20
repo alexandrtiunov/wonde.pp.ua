@@ -1,0 +1,42 @@
+
+#portfolio-images-form select{
+    width: 175px;
+}
+.news-foto {
+    width: 700px;
+    height: 500px;
+    float: right;
+}
+#foto-carousel {
+    margin-bottom: 0 !important;
+    text-align: center;
+    margin-right: 0;
+    width: 100%;
+}
+#foto-carousel li {
+    text-align: center;
+    padding-bottom: 0 !important;
+    height: 38px;
+    position: relative;
+    width: 192px;
+    display: inline-block;
+}
+#foto-carousel .logo-outer {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+#foto-carousel .logo-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+#foto-carousel li img {
+    max-width: 270px;
+    max-height: 100px;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
