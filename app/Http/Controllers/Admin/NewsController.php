@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use App\News;
 use App\Role;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
@@ -21,8 +20,6 @@ class NewsController extends Controller
     {
 
         $news = News::all();
-//        $paginate = News::paginate(3);
-//        dd($paginate);
 
         return view('news.index', ['news' => $news]);
     }
@@ -36,12 +33,6 @@ class NewsController extends Controller
     {
         $categories = Category::all();
 
-//        $task = new Task();
-//
-//        if (Gate::denies('add', $task)) {
-//
-//            return redirect()->back()->with(['message' => 'У Вас нет прав']);
-//        }
         return view('news.create', ['categories' => $categories]);
     }
 
@@ -96,9 +87,9 @@ class NewsController extends Controller
     public function edit($id)
     {
         $news = News::find($id);
+
         $categories = Category::all();
 
-//        dd($news);
         return view('news.edit', compact('news', 'id'), ['categories' => $categories]);
     }
 
@@ -112,13 +103,6 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         $news = News::find($id);
-
-//        if (Gate::denies('update', $task)) {
-//            //  echo 111; die;
-//            return redirect()->back()->with(['message' => 'У Вас нет прав']);
-//        }
-
-        //echo 222; die;
 
         $this->validate(request(), [
             'title' => 'required',

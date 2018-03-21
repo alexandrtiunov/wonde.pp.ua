@@ -22,7 +22,7 @@ class ContactController extends Controller
             'phone' => 'required',
             'message' => 'required',
         ]);
-//        dd($feedBack);
+
         if (Feedback::create($feedBack)) {
             return back()->with('success', 'Спасибо, Ваше сообщение получено');
         }

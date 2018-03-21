@@ -19,7 +19,6 @@ class NewsController extends Controller
             $search = $request->input('news-search');
             $news = News::where('content', 'like', '%' . $search . '%')->paginate(5);
         } elseif ($categoryShortName) {
-            //$news = News::join('categories', 'news.category_id', '=', 'categories.id')->where('categories.short_name', $categoryShortName)->get();
             $categories = Category::where('short_name', $categoryShortName)->first();
             $catId = $categories->id;
             $news = News::where('category_id', $catId)->get();

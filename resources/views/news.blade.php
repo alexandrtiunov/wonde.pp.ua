@@ -35,16 +35,13 @@
                     <!-- Meta -->
                     <div class="blog-meta">
                         <div class="meta-item"><div class="meta-title published">Дата:</div>{{$item['created_at']}}</div>
-                        {{--<div class="meta-item"><div class="meta-title views">Просмотры:</div><a href="#">9</a></div>--}}
                         <div class="meta-item"><div class="meta-title comments">Комментарии:</div>{{count($item->comment)}}</div>
-                        {{--<div class="meta-item"><div class="meta-title tags">Теги</div><a href="#">новости</a>, <a href="#">шаблоны</a></div>--}}
                     </div>
                     <h3>{{$item['short_discription']}}</h3>
                     <!-- Image -->
                     <a href="{{action('NewsController@detail', [$item->category->short_name, $item['short_name']])}}" class="media image-link"><img alt="" src="/images/news-foto/{{$item['img_path']}}" class="fullwidth"></a>
                     <!-- Excerpt -->
                     <div class="blog-content">
-                        {{--<p>{{$item['short_discription']}}</p>--}}
                         <!-- Read More Button -->
                         <a href="{{action('NewsController@detail', [$item->category->short_name, $item['short_name']])}}" class="button accent">Читать далее</a>
                     </div>
@@ -60,8 +57,8 @@
                 <div class="blog-nav">
 
 
-                    {{--<a href="{{$news->previousPageUrl()}}" class="back">Назад</a>--}}
-                    {{--<a href="{{$news->nextPageUrl()}}" class="next">Вперед</a>--}}
+                    <a href="{{$news->previousPageUrl()}}" class="back">Назад</a>
+                    <a href="{{$news->nextPageUrl()}}" class="next">Вперед</a>
                 </div>
 
 

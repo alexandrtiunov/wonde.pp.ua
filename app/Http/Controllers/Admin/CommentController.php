@@ -16,8 +16,6 @@ class CommentController extends Controller
         $news = News::find($id);
 
         $comments = Comment::where('news_id', $news->id)->get();
-//        $paginate = News::paginate(3);
-//        dd($comments);
 
         return view('news.comments', ['comments' => $comments, 'title' => $title]);
     }
@@ -26,7 +24,7 @@ class CommentController extends Controller
     {
 
         $comments = Comment::find($id);
-//        dd($comments);
+
         $comments->delete();
 
         return back();

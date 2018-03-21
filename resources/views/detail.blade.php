@@ -34,9 +34,7 @@
                         <!-- Meta -->
                         <div class="blog-meta">
                             <div class="meta-item"><div class="meta-title published">Дата:</div><a href="#">{{$news->created_at}}</a></div>
-                            {{--<div class="meta-item"><div class="meta-title views">Просмотры:</div><a href="#">9</a></div>--}}
                             <div class="meta-item"><div class="meta-title comments">Комментарии:</div>{{count($news->comment)}}</div>
-                            {{--<div class="meta-item"><div class="meta-title tags">Теги:</div><a href="#">новости</a>, <a href="#">шаблоны</a></div>--}}
                         </div>
 
 
@@ -54,7 +52,6 @@
                                         <!-- Actual Images -->
 
                                         <img alt="" src="/images/news-foto/{{$news->img_path}}" class="fullwidth">
-                                        {{--<img alt="" src="..\images\placeholders\preview12.jpg" class="fullwidth">--}}
 
                                         <!-- END Actual Images -->
 
@@ -62,10 +59,6 @@
 
                                     <div class="content-width">
                                         <div class="client-logos-container">
-
-                                            {{--<div class="client-logos-title">--}}
-                                                {{--<span>Наши партнеры</span>--}}
-                                            {{--</div>--}}
 
                                             <div id="clients-back"></div>
                                             <div id="clients-next"></div>
@@ -102,9 +95,6 @@
 
                             <!-- END Image -->
 
-
-                            <!-- H3 Title -->
-                            {{--<h3>Департамент маркетинга и продаж экономит медиамикс</h3>--}}
                             <!-- Paragraph -->
                             <p>{{$news->content}}</p>
 

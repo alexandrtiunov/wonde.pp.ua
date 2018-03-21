@@ -7,7 +7,7 @@
 
 @section ('title')
 
-    <title>Wonde - универсальный бизнес шаблон сайта</title>
+    <title>Wonde</title>
 
 @show
 
@@ -60,33 +60,14 @@
                 </li>
                 <li><a href="https://www.facebook.com/profile.php?id=100001614809253&ref=bookmarks" target="_blank"><i class="fa fa-facebook"></i><div class="tooltip">Facebook</div></a>
                 </li>
-                {{--<li><a href="#"><i class="fa fa-twitter"></i><div class="tooltip">Twitter</div></a>--}}
-                {{--</li>--}}
-                {{--<li><a href="#"><i class="fa fa-google-plus"></i><div class="tooltip">Google+</div></a>--}}
-                {{--</li>--}}
             </ul>
 
             <ul class="topnav">
                 <li><a href="{{action('IndexController@index')}}" class="current">Главная</a>
                 </li>
-                {{--<li><a href="about.html">О компании</a>--}}
-                {{--</li>--}}
                 <li><a href="{{action ('PortfolioController@index')}}" class="">Галерея</a>
-                    {{--<ul>--}}
-                        {{--<li><a href="#">Название проекта №1</a></li>--}}
-                        {{--<li><a href="#">Название проекта №2</a></li>--}}
-                        {{--<li><a href="#">Название проекта №3</a></li>--}}
-                        {{--<li><a href="#">Название проекта №4</a></li>--}}
-                        {{--<li><a href="#">Название проекта №5</a></li>--}}
-                    {{--</ul>--}}
                 </li>
                 <li><a href="{{action('NewsController@index')}}" >Новости</a>
-                    {{--<ul>class="drop"--}}
-                        {{--<li><a href="blog.html">Категории</a>--}}
-                        {{--</li>--}}
-                        {{--<li><a href="blog-post.html">Описание новости</a>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
                 </li>
                 <li><a href="{{action('ContactController@index')}}">Контакты</a>
                 </li>
@@ -113,18 +94,6 @@
     <div class="home-banner dark">
 
         <ul class="slider-container" id="home-slider">
-            {{--<li class="slide-outer">--}}
-                {{--<div class="slide-inner">--}}
-                    {{--<div class="content-width">--}}
-                        {{--<div class="slide-style-1">--}}
-                            {{--<!-- Title -->--}}
-                            {{--<h1>Бесплатный шаблон <span>HTML5</span> с адаптивным дизайном<span>.</span></h1>--}}
-                            {{--<!-- Text -->--}}
-                            {{--<p>Системный анализ, отбрасывая подробности, подсознательно концентрирует конкурент.</p>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</li>--}}
 
             <li class="slide-outer">
                 <div class="slide-inner">
@@ -135,14 +104,8 @@
 
                                 <!-- Icon Backing -->
                                 <div class="icon-backing">
-                                    <!-- Icon -->
-                                    {{--<i class="fa fa-css3"></i>--}}
                                 </div>
                             </div>
-                            <!-- Title -->
-                            {{--<h1>Современный шбалон сайта<span>.</span></h1>--}}
-                            {{--<!-- Text -->--}}
-                            {{--<p>Системный анализ, отбрасывая подробности, подсознательно концентрирует конкурент.</p>--}}
                         </div>
                     </div>
                 </div>
@@ -154,9 +117,6 @@
                         <div class="slide-style-1">
                             <!-- Title -->
                             <img src="{{URL::to('images\client-logos\beetroot2.png')}}">
-                            {{--<h1>Бесплатный шаблон <span>HTML5</span> с адаптивным дизайном<span>.</span></h1>--}}
-                            {{--<!-- Text -->--}}
-                            {{--<p>Системный анализ, отбрасывая подробности, подсознательно концентрирует конкурент.</p>--}}
                         </div>
                     </div>
                 </div>
@@ -167,15 +127,6 @@
         <div class="slider-nav-container">
             <div class="slider-nav-inner">
                 <div class="slider-nav content-width">
-
-                    <ul id="bx-pager">
-                        <li><a data-slide-index="0" href="">Вступление</a>
-                        </li>
-                        <li><a data-slide-index="1" href="">Описание</a>
-                        </li>
-                        <li><a data-slide-index="2" href="">Предложения</a>
-                        </li>
-                    </ul>
 
                     <div class="slider-controls">
                         <div id="slider-pause"></div>
@@ -213,7 +164,6 @@
                         <img alt="" src="..\images\topbar\logo_white.png" height="17" width="57" class="logo">
                         <p>Маркетингово-ориентированное издание, как следует из вышесказанного, редко соответствует рыночным ожиданиям.</p>
                         <p>Психологическая среда, безусловно, порождает продуктовый ассортимент.</p>
-                        <p><a href="about.html">Читать далее</a>
                         </p>
                     </div>
 
@@ -221,16 +171,9 @@
                         <img alt="" src="..\images\topbar\logo_white.png" height="17" width="57" class="logo">
                         <p>Маркетингово-ориентированное издание, как следует из вышесказанного, редко соответствует рыночным ожиданиям.</p>
                         <p>Психологическая среда, безусловно, порождает продуктовый ассортимент.</p>
-                        <p><a href="about.html">Читать далее</a>
                         </p>
                     </div>
 
-                    {{--<div class="column-one-fourth">--}}
-                        {{--<h3>Галерея</h3>--}}
-                        {{--<div class="footer-flickr-container">--}}
-                            {{--<script type="text/javascript" src="js\flickr.js"></script>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
                     <div class="column-one-fourth">
 
                         <h3>Подписаться</h3>
@@ -252,18 +195,6 @@
                             <li>
                                 <a href="https://www.facebook.com/profile.php?id=100001614809253&ref=bookmarks" target="_blank"><i class="fa fa-facebook"></i><div class="tooltip">Facebook</div></a>
                             </li>
-                            {{--<li>--}}
-                                {{--<a href="#"><i class="fa fa-twitter"></i><div class="tooltip">Twitter</div></a>--}}
-                            {{--</li>--}}
-                            {{--<li>--}}
-                                {{--<a href="#"><i class="fa fa-google-plus"></i><div class="tooltip">Google+</div></a>--}}
-                            {{--</li>--}}
-                            {{--<li>--}}
-                                {{--<a href="#"><i class="fa fa-youtube"></i><div class="tooltip">YouTube</div></a>--}}
-                            {{--</li>--}}
-                            {{--<li>--}}
-                                {{--<a href="#"><i class="fa fa-pinterest"></i><div class="tooltip">Pinterest</div></a>--}}
-                            {{--</li>--}}
                         </ul>
 
                     </div>
@@ -275,8 +206,6 @@
                     <ul class="footer-lower">
                         <li><a href="{{action('IndexController@index')}}">Главная</a>
                         </li>
-                        {{--<li><a href="about.html">О нас</a>--}}
-                        {{--</li>--}}
                         <li><a href="{{action ('PortfolioController@index')}}">Галерея</a>
                         </li>
                         <li><a href="{{action('NewsController@index')}}">Новости</a>

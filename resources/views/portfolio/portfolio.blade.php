@@ -23,21 +23,6 @@
 
                 <!-- END Title -->
 
-
-                <!-- Filters -->
-
-                <!-- Ensure all filter tags are in the "show all" data-filter -->
-            {{--<div class="portfolio-filtering">--}}
-            {{--<ul id="portfolio-filters">--}}
-            {{--<li><span class="filter active" data-filter="branding coding identity">Все</span></li>--}}
-            {{--<li><span class="filter" data-filter="branding">Новые</span></li>--}}
-            {{--<li><span class="filter" data-filter="coding">Популярные</span></li>--}}
-            {{--<li><span class="filter" data-filter="identity">Лучшие</span></li>--}}
-            {{--</ul>--}}
-            {{--</div>--}}
-
-            <!-- END Filters -->
-
             </div>
 
 
@@ -56,8 +41,6 @@
                         <h3>
                             <a href="{{action('PortfolioController@detail', $category->short_name)}}">{{$category->title}}</a>
                         </h3>
-                        <!-- Tags -->
-                        {{--<div class="tags">Описание проекта</div>--}}
                     </li>
 
                     <!-- END One Fourth -->

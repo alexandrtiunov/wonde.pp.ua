@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
 use App\Comment;
-use App\News;
 
 class CommentController extends Controller
 {

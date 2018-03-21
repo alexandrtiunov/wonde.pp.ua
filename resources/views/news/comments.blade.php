@@ -196,28 +196,33 @@
                 <div class="col-sm-7">
                     <table>
                         <td>
-                            <a href="{{action('Admin\NewsController@index')}}" class="btn btn-primary"> <span>Назад</span></a>
+                            <a href="{{action('Admin\FeedbackController@index')}}" class="btn btn-primary"> <span>Feedback</span></a>
+                        </td>
+                        <td>
+                            <a href="{{action('Admin\NewsController@create')}}" class="btn btn-primary"> <span>Add New News</span></a>
                         </td>
                         <td>
                             @guest
                             <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                             @else
-                                <a href="{{ route('logout') }}" class="btn btn-primary"><span>Logout</span></a>
-                        </td>
-                        <td>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                            @endguest
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                                @endguest
                         </td>
                     </table>
                 </div>
@@ -256,10 +261,6 @@
             @endforeach
         </table>
         <div class="clearfix">
-            {{--<div class="hint-text">Showing <b>X</b> out of <b>XX</b> entries</div>--}}
-            <ul class="pagination">
-                {{--{{ $paginate->links() }}--}}
-            </ul>
         </div>
     </div>
 </div>
